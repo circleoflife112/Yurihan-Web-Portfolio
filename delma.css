@@ -1,0 +1,774 @@
+/* nomalize */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* text properties start */
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  line-height: 90%;
+  margin-top: 2rem;
+  line-height: 0.4;
+}
+
+.studios {
+  font-style: italic;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  line-height: 0.3;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 0.7rem;
+}
+
+h4 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgb(95, 93, 86);
+}
+
+/* text properties end */
+
+#delma-wrap {
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #fffceb;
+}
+
+#delma-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 7rem;
+  padding: 0 120px;
+  justify-content: space-around;
+  animation: change 1s ease forwards;
+}
+
+@keyframes change {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/** fixed navigation **/
+
+#goto_other_page {
+  display: flex;
+  position: absolute;
+  right: 32rem;
+  top: 2.5rem;
+}
+
+#goto_other_page > li {
+  margin: 0 1rem;
+}
+
+#goto_other_page > li > a {
+  position: relative;
+}
+
+#goto_other_page > li > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
+  opacity: 0;
+  background-color: black;
+}
+
+#goto_other_page > li > a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+#goto_other_page > li:hover {
+  font-weight: 500;
+}
+
+#title_holder {
+  display: flex;
+}
+
+#title_holder > li {
+  background-color: black;
+  position: fixed;
+  color: #fffceb;
+  transition: 0.7s;
+  top: 1rem;
+  height: 60px;
+}
+
+#title_holder > .portfolio {
+  padding: 0 1.3rem;
+  right: 18rem;
+  border-radius: 50px;
+}
+
+.portfolio > a {
+  display: flex;
+}
+
+.portfolio > a > h4 {
+  line-height: 50%;
+}
+
+#title_holder > .top-btn {
+  border-radius: 50%;
+  right: 13rem;
+  padding: 0 1rem;
+}
+
+#title_holder > .top-btn h4 {
+  line-height: 50%;
+}
+
+#title_holder > li:hover {
+  background-color: #fffceb;
+  color: black;
+  box-shadow: 1px 1px 10px 3px rgb(110, 104, 88, 20%);
+}
+
+/** fixed navigation end **/
+
+#delma-main > #delma-main-img {
+  height: 100%;
+  width: 180px;
+}
+
+#delma-main-img .thread-opacity {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#delma-main-img > .thread-opacity > a {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#delma-main-img > .thread-opacity > a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#delma-title {
+  display: grid;
+  width: 100%;
+  padding: 5rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#delma-title > .delma-title-1 {
+  grid-column: 1/2;
+}
+
+#delma-title > li:nth-of-type(2) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+#delma-title > li:nth-of-type(3) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+  justify-items: right;
+  text-align: right;
+}
+
+.delma-list > a {
+  display: block;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  transition: 0.7s, 0.7s;
+}
+
+.delma-list > a:hover {
+  background-color: black;
+  color: #fffceb;
+}
+
+.delma-list > a > h4 {
+  font-weight: 400;
+}
+
+.delma-main-text {
+  max-width: 500px;
+  padding: 3rem 0;
+}
+
+.delma-main-text {
+  display: flex;
+}
+
+.delma-main-text > div {
+  width: 30px;
+  height: 5px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.delma-main-text > p {
+  overflow: auto;
+}
+
+.delma-main-text > div > img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+/** section part (portfolico part start) **/
+
+section {
+  box-shadow: -4px -4px 8px 8px rgb(110, 104, 88, 20%);
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+#delma-onlinepg-wrap {
+  max-width: 1920px;
+  height: 900px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 auto;
+  padding: 120px;
+}
+
+#delma-onlinepg-wrap > ul {
+  width: 100%;
+}
+
+#delma-onlinepg-tool > .delma_work_info {
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6.25rem 0;
+}
+
+#delma-onlinepg-tool > .delma_work_info h3 {
+  font-weight: 500;
+}
+
+#delma-onlinepg-tool > .delma_work_info p {
+  line-height: 0.8;
+}
+
+#delma-onlinepg-title > h2 {
+  line-height: 0.5;
+  text-align: right;
+}
+
+.design_for_online {
+  font-style: italic;
+  font-weight: 100;
+}
+
+#delma-online-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#delma-online-txt h3 {
+  font-weight: 500;
+}
+
+/** mobile **/
+
+#mobile_imgs_wrap {
+  padding: 2rem 120px;
+}
+
+#mobile-wrap {
+  width: 1200px;
+  height: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  /* border: solid 1px red; */
+}
+
+#mobile-wrap > li {
+  height: 60%;
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 35px;
+  text-align: center;
+  overflow: scroll;
+  box-shadow: 5px 5px 5px 2px rgb(110, 104, 88, 20%);
+  border: 5px solid black;
+  margin: 0 2rem;
+  position: relative;
+}
+
+#mobile-wrap > li::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 20px;
+  background-color: black;
+}
+
+#mobile-wrap > li:before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 20%;
+  height: 10px;
+  border-radius: 20px;
+  top: 10px;
+  right: 40%;
+  left: 40%;
+}
+
+#mobile-wrap > li img {
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  text-align: center;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/** mobile end **/
+
+/** slider **/
+
+#card-slider-wrap {
+  max-width: 1920px;
+  position: relative;
+  margin: 0 auto;
+  margin: 7rem 120px;
+}
+
+#card-slider-wrap > p {
+  margin-bottom: 10rem;
+}
+
+#postcard-design-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 0;
+  overflow-x: auto;
+}
+
+#postcard-design-container::-webkit-scrollbar {
+  height: 0.4rem;
+}
+
+#postcard-design-container::-webkit-scrollbar-thumb {
+  background: rgb(68, 67, 57);
+  border-radius: 10px;
+}
+
+#postcard-design-container::-webkit-scrollbar-track {
+  background: oldlace;
+}
+
+#postcard-design-container > li {
+  width: 600px;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+#postcard-design-container > li > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.for_hompage {
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* button custom */
+
+.btn {
+  position: absolute;
+  border: none;
+  background: rgb(68, 67, 57);
+  top: 70%;
+  bottom: 45%;
+  font-size: 2rem;
+  line-height: 0%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#pre-button {
+  left: -3rem;
+}
+
+#next-button {
+  right: -3rem;
+}
+
+/** popup part **/
+
+#delma_popup {
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 15rem;
+  padding: 5rem 120px;
+  position: relative;
+}
+
+#delma_popup_wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#delma_popup_wrap > li {
+  margin: 1rem;
+}
+
+#delma_popup_wrap > li > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#delma_popup_wrap > div {
+  background-color: #fffceb;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+}
+
+/** javaScript toggle **/
+
+.pop_up_pop_up {
+  display: grid;
+  transition: all 2s ease-in-out;
+}
+
+/** javaScript toggle end **/
+
+#delma_popup_wrap > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pop_up {
+  font-style: italic;
+  font-weight: 200;
+}
+
+/** media query **/
+
+/** 1440 ~ 1224 **/
+
+@media (max-width: 1440px) and (min-width: 1225px) {
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    line-height: 0.7rem;
+  }
+
+  h4 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  #delma-main {
+    height: 750px;
+  }
+
+  #title_holder > .portfolio {
+    right: 15rem;
+  }
+
+  #title_holder > .top-btn {
+    right: 10rem;
+  }
+
+  #delma-main-img {
+    height: 100%;
+    width: 170px;
+  }
+
+  .thread-opacity {
+    height: 100%;
+    width: 100%;
+    margin: 0 20%;
+    overflow: hidden;
+  }
+
+  .thread-opacity > a,
+  .thread-opacity > a > img {
+    width: 100%;
+    height: auto;
+  }
+
+  #delma-title {
+    margin-right: 3rem;
+  }
+
+  #delma-title > .delma-title-1 {
+    height: 230px;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  #delma-title > .delma-title-1 > h1 {
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+
+  .delma-main-text {
+    padding-top: 6rem;
+    max-width: 400px;
+  }
+
+  .delma-list {
+    padding-right: 3rem;
+  }
+}
+
+/** 1224 ~ 1080 **/
+
+@media (max-width: 1224px) and (min-width: 1080px) {
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    line-height: 0.7rem;
+  }
+
+  h4 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  #delma-main {
+    height: 750px;
+  }
+
+  #title_holder > .portfolio {
+    right: 15rem;
+  }
+
+  #title_holder > .top-btn {
+    right: 10rem;
+  }
+
+  #delma-main-img {
+    height: 100%;
+    width: 170px;
+  }
+
+  .thread-opacity {
+    height: 100%;
+    width: 100%;
+    margin: 0 20%;
+    /* opacity: 0.3; */
+    overflow: hidden;
+  }
+
+  .thread-opacity > a,
+  .thread-opacity > a > img {
+    width: 100%;
+    height: auto;
+  }
+
+  #delma-title > .delma-title-1 {
+    height: 230px;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  #delma-title > .delma-title-1 > h1 {
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+
+  .delma-main-text {
+    padding-top: 6rem;
+    max-width: 400px;
+  }
+
+  .delma-list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/** 1080 ~ 768 **/
+
+@media (max-width: 1080px) and (min-width: 768px) {
+  #delma-onlinepg-wrap {
+    max-width: 1080px;
+    height: 1080px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  #delma-onlinepg-wrap > ul {
+    width: 100%;
+  }
+
+  /** mobile **/
+
+  #mobile-wrap {
+    margin: 0 auto;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 3fr;
+    grid-row: 1/4;
+  }
+
+  #mobile-wrap > li {
+    height: 100%;
+    border-radius: 30px;
+    text-align: center;
+    overflow: scroll;
+    grid-row: 2/4;
+    box-shadow: 5px 5px 5px 2px rgb(110, 104, 88, 20%);
+    border: 5px solid black;
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  #mobile-wrap > li:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    border-radius: 20px;
+    top: 10px;
+    right: 40%;
+    left: 40%;
+  }
+
+  #mobile-wrap > li img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  /** mobile end **/
+
+  #delma-onlinepg-title > h2 {
+    line-height: 50%;
+  }
+
+  #delma-onlinepg-tool {
+    display: flex;
+    justify-content: space-around;
+    text-align: right;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    height: 200px;
+    margin-bottom: 0;
+  }
+
+  #delma-onlinepg-tool > h3 {
+    display: inline-block;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    /* border: solid red 1px; */
+    margin: 0;
+    line-height: 2;
+    font-size: 2rem;
+  }
+
+  #delma-onlinepg-tool > .tool_wrap {
+    display: flex;
+  }
+
+  #delma-onlinepg-tool > .tool_wrap > div {
+    margin: 1rem;
+  }
+
+  #delma-onlinepg-title {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+}
+
+/** 168 ~ 412 **/
+
+/** 412 ~ 360 (mobile) **/

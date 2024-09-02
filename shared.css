@@ -1,0 +1,23 @@
+/** 한글 소제목 공통**/
+
+.work_info {
+  max-height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6.25rem 0;
+}
+
+.work_info span {
+  margin-left: 1rem;
+}
+
+.work_info p {
+  margin-left: 1rem;
+  line-height: 0.8;
+}
+
+#web-intro h3 {
+  font-family: sans-serif;
+  margin-left: 1rem;
+}

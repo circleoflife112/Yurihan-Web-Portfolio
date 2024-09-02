@@ -1,0 +1,683 @@
+/* font-family: 'Abril Fatface', serif;
+font-family: 'DM Serif Display', serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; 
+*/
+
+/* font-family: 'Abril Fatface', serif;
+font-family: 'DM Serif Display', serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.hahmlet-<uniquifier> {
+  font-family: "Hahmlet", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffceb;
+}
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+
+#rope_part_holder {
+  width: 100%;
+  height: 100%;
+}
+
+#rope_holder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#rope_holder li {
+  position: absolute;
+}
+
+.yellow-delma, 
+.green-doosi {
+  height: 100%;
+  width: 200px;
+}
+
+.orange-personal,
+.blue-uni {
+  width: 100%;
+  height: 200px;
+}
+
+/* thread hover title */
+
+#rope_holder > li > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.orange-personal > a,
+.blue-uni > a {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#rope_holder > li > a > img {
+  overflow: contain;
+  flex-grow: 1;
+}
+
+#rope_holder h3 {
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 0;
+  opacity: 0;
+  display: flex;
+  transition: all 1s ease-in-out;
+}
+
+
+#rope_holder .yellow-thread img,
+#rope_holder .green-thread img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#rope_holder .yellow-thread h3,
+#rope_holder .green-thread h3 {
+  margin-top: 2rem;
+}
+
+#rope_holder .orange-thread img,
+#rope_holder .blue-thread img {
+  width: 100%;
+  height: 50%;
+  padding: 0;
+  object-fit: contain;
+} 
+
+#rope_holder .orange-thread h3,
+#rope_holder .blue-thread h3 {
+  margin-left: 3rem;
+}
+
+/* thread hover */
+
+#rope_holder > li:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in-out;
+}
+
+#rope_holder li:hover h3 {
+  opacity: 1;
+  margin-left: 1rem;
+}
+
+
+/* thread position */
+
+.yellow-delma {
+  right: 28%;
+}
+
+.green-doosi {
+  left: 28%;
+}
+
+.orange-personal {
+  top: 28%;
+}
+
+.blue-uni {
+  bottom: 23%;
+}
+
+
+/** title **/
+
+#side-drawer {
+  background-color: #fffceb;
+  max-width: 1920px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 3rem;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 50px;
+  box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
+}
+
+#side-drawer:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#side-content-holder {
+  width: 100%;
+  height: 100%;
+}
+
+#side-content-holder > p {
+  width: 90%;
+  height: 100%;
+  white-space:pre-line;
+}
+
+#title_holder {
+  height: 100%;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  line-height: 13%;
+  font-weight: 700;
+}
+
+.han {
+  font-style: italic;
+  font-weight: 200;
+}
+
+h3,
+h4,
+h5 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+
+/** media **/
+
+/** 1440 ~ 1224 **/
+ 
+@media (max-width: 1440px) and (min-width: 1224px) {
+
+  .rope1 {
+    transform: rotate(90deg);
+    top: 33%;
+    left: -30%;
+  }
+}
+
+
+/** 1224 ~ 1080 **/
+
+@media (max-width: 1224px) and (min-width: 1080px) {
+  
+  .yellow-delma, 
+  .green-doosi {
+    height: 100%;
+    width: 150px;
+  }
+  
+  .orange-personal,
+  .blue-uni {
+    width: 100%;
+    height: 200px;
+  }
+  
+  /* thread hover title */
+  
+  #rope_holder h3 {
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-size: 1.1rem;
+  }
+  
+  
+  #rope_holder .yellow-thread img,
+  #rope_holder .green-thread img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  #rope_holder .yellow-thread h3,
+  #rope_holder .green-thread h3 {
+    margin-top: 2rem;
+  }
+  
+  #rope_holder .orange-thread img,
+  #rope_holder .blue-thread img {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    object-fit: contain;
+  } 
+  
+  #rope_holder .orange-thread h3,
+  #rope_holder .blue-thread h3 {
+    margin-left: 2rem;
+    width: 180px;
+  }
+  
+  /* thread hover */
+  
+  #rope_holder li:hover h3 {
+    margin-left: 0.6rem;
+  }
+  
+  
+  /* thread position */
+  
+  .yellow-delma {
+    right: 27%;
+  }
+  
+  .green-doosi {
+    left: 27%;
+  }
+  
+  .orange-personal {
+    top: 23%;
+  }
+  
+  .blue-uni {
+    bottom: 23%;
+  }
+  
+  
+  /** title **/
+  
+  #title_holder {
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
+  }
+  
+  .portfolio {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    line-height: 13%;
+    font-weight: 700;
+  }
+  
+  .han {
+    font-style: italic;
+    font-weight: 200;
+  }
+  
+  h3,
+  h4,
+  h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+  }
+  
+  p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1rem;
+  }
+}
+
+
+/** 1080 ~ 768 **/
+
+@media (max-width: 1080px) and (min-width: 768px) {
+  .yellow-delma, 
+  .green-doosi {
+    height: 100%;
+    width: 100px;
+  }
+  
+  .orange-personal,
+  .blue-uni {
+    width: 150%;
+    height: 200px;
+  }
+  
+  /* thread hover title */
+  
+  #rope_holder h3 {
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-size: 1.1rem;
+  }
+  
+  
+  #rope_holder .yellow-thread img,
+  #rope_holder .green-thread img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  #rope_holder .yellow-thread h3,
+  #rope_holder .green-thread h3 {
+    margin-top: 2rem;
+  }
+  
+  #rope_holder .orange-thread img,
+  #rope_holder .blue-thread img {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    object-fit: contain;
+  } 
+  
+  #rope_holder .orange-thread h3,
+  #rope_holder .blue-thread h3 {
+    margin-left: 2rem;
+    width: 100px;
+  }
+  
+  /* thread hover */
+  
+  #rope_holder li:hover h3 {
+    margin-left: 0.6rem;
+  }
+  
+  
+  /* thread position */
+  
+  .yellow-delma {
+    right: 27%;
+  }
+  
+  .green-doosi {
+    left: 27%;
+  }
+  
+  .orange-personal {
+    top: 23%;
+  }
+  
+  .blue-uni {
+    bottom: 20%;
+  }
+  
+  
+  /** title **/
+  
+  #title_holder {
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
+  }
+  
+  .portfolio {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5.5rem;
+    line-height: 13%;
+    font-weight: 700;
+  }
+  
+  .han {
+    font-style: italic;
+    font-weight: 200;
+  }
+  
+  h3,
+  h4,
+  h5 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1rem;
+  }
+}
+
+
+
+/** 168 ~ 412 **/
+
+@media (max-width: 431px) and (min-width: 168px)  {
+  #container {
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  
+  #rope_part_holder {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #rope_holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #rope_holder li {
+    position: absolute;
+  }
+  
+  .yellow-delma, 
+  .green-doosi {
+    height: 100%;
+    width: 120px;
+  }
+  
+  .orange-personal,
+  .blue-uni {
+    width: 100%;
+    height: 120px;
+    border: solid 1px red;
+  }
+  
+  /* thread hover title */ 
+  
+  #rope_holder > li > a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .orange-personal > a,
+  .blue-uni > a {
+    flex-direction: column;
+  }
+  
+  #rope_holder > li > a > img {
+    overflow: contain;
+    flex-grow: 1;
+  }
+  
+  #rope_holder h3 {
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-weight: 400;
+    font-size: 1.2rem;
+    opacity: 1;
+    margin-top: 0;
+    display: flex;
+  }
+  
+  
+  #rope_holder .yellow-thread img,
+  #rope_holder .green-thread img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  #rope_holder .yellow-thread h3,
+  #rope_holder .green-thread h3 {
+    margin-top: 2rem;
+  }
+  
+  #rope_holder .orange-thread img,
+  #rope_holder .blue-thread img {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    object-fit: cover;
+  } 
+  
+  #rope_holder .orange-thread h3,
+  #rope_holder .blue-thread h3 {
+    margin-left: 3rem;
+  }
+  
+  /* thread hover */
+  
+  
+  /* thread position */
+  
+  .yellow-delma {
+    right: 28%;
+  }
+  
+  .green-doosi {
+    left: 28%;
+  }
+  
+  .orange-personal {
+    top: 28%;
+  }
+  
+  .blue-uni {
+    bottom: 23%;
+  }
+  
+  
+  /** title **/
+  
+  #side-drawer {
+    background-color: #fffceb;
+    max-width: 1920px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 3rem;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 50px;
+    box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
+  }
+  
+  #side-drawer:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #side-content-holder {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #side-content-holder > p {
+    width: 90%;
+    height: 100%;
+    white-space:pre-line;
+  }
+  
+  #title_holder {
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
+  }
+  
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 13%;
+    font-weight: 700;
+  }
+  
+  .han {
+    font-style: italic;
+    font-weight: 200;
+  }
+  
+  h3,
+  h4,
+  h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1rem;
+  }
+}
+
+
+
+
+/** 412 ~ 360 (mobile) **/
+
