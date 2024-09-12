@@ -65,7 +65,7 @@ p {
 
 #concept-wrap {
   max-width: 1920px;
-  height: 200vh;
+  height: auto;
   margin: 0 auto;
   background-color: #fffceb;
 }
@@ -76,7 +76,6 @@ p {
   display: flex;
   flex-direction: column;
   animation: change 1s ease forwards;
-  border: solid 1px red;
 }
 
 @keyframes change {
@@ -216,7 +215,7 @@ p {
 
 .concept_img > a {
   display: table;
-  width: 600px;
+  max-width: 600px;
   height: 3rem;
   margin-top: 1rem;
 }
@@ -227,17 +226,34 @@ p {
   object-fit: contain;
 }
 
-.uni-main-text {
+.concept-main-text {
   grid-column: 1/2;
   grid-row: 2/3;
+  margin-right: 120px;
 }
 
 /** concept img**/
 
 #concept_imgs_wrap {
-  max-width: 1920px;
-  height: 100%;
+  width: 100%;
+  height: 700px;
   display: flex;
+  margin: 0 auto;
   padding: 120px;
-  border: solid 1px blue;
+  justify-content: space-around;
+  position: relative;
+}
+
+#concept_imgs_wrap > li {
+  position: absolute;
+}
+
+#concept_imgs_wrap > .anni1 {
+  left: 120px;
+  top: 5rem;
+}
+
+#concept_imgs_wrap > .anni2 {
+  right: 120px;
+  bottom: 5rem;
 }
