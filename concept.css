@@ -63,16 +63,16 @@ p {
 
 /* text properties end */
 
-#uni-wrap {
+#concept-wrap {
   max-width: 1920px;
   height: 200vh;
   margin: 0 auto;
   background-color: #fffceb;
 }
 
-#uni-main {
+#concept-main {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   animation: change 1s ease forwards;
@@ -178,27 +178,27 @@ p {
 
 /** thread img edit **/
 
-#uni-main > #uni-main-img {
+#concept-main > #concept-main-img {
   width: 100%;
   margin-top: 8rem;
 }
 
-#uni-main > #uni-main-img > li {
+#concept-main > #concept-main-img > li {
   width: 100%;
 }
 
-#uni-main > #uni-main-img > li > a {
+#concept-main > #concept-main-img > li > a {
   width: 100%;
 }
 
-#uni-main > #uni-main-img > li > a > img {
+#concept-main > #concept-main-img > li > a > img {
   width: 100%;
   object-fit: cover;
 }
 
 /** title **/
 
-#uni-title {
+#concept-title {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
