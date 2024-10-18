@@ -1,8 +1,8 @@
 $(".thread").hover(function () {
   let $this = $(this);
 
-  if ($this.hasClass("thread_hover")) {
-    $($this).removeClass("thread_hover");
+  if ($this.hasClass("thread")) {
+    $($this).removeClass("thread");
   } else {
     $($this).addClass("thread_hover");
   }
@@ -11,7 +11,7 @@ $(".thread").hover(function () {
 //siblings 활용
 
 $(".thread").hover(function () {
-  $(this).addClass("thread_hover");
+  $(this).addClass("thread");
 
-  $(this).siblings(".thread_hover").removeClass("thread_hover");
+  $(this).siblings(".thread").hasClass("thread_hover");
 });
