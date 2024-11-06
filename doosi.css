@@ -438,17 +438,14 @@ section {
 /** 모바일 스크롤바 커스텀 - 안됨 **/
 
 #mobile-wrap > li::-webkit-scrollbar {
-  height: 10px;
-  width: 2px;
+  width: 4px;
+  overflow-y: auto;
 }
 
 #mobile-wrap > li::-webkit-scrollbar-thumb {
-  background: red;
+  background: black;
   border-radius: 10px;
-}
-
-#mobile-wrap > li::-webkit-scrollbar-track {
-  background: oldlace;
+  overflow-y: hidden;
 }
 
 /** 모바일 스크롤바 커스텀 - 안됨 **/
