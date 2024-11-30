@@ -244,10 +244,9 @@ a {
   bottom: 0;
   right: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px 2fr 1fr;
   padding: 1rem;
   border-radius: 50px;
   box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
@@ -288,13 +287,6 @@ a {
   margin: 0;
 }
 
-#side-drawer h4 {
-  font-weight: 500;
-  line-height: 0.7;
-  margin: 0;
-  color: rgb(77, 76, 69);
-}
-
 #side-drawer h5 {
   display: inline-block;
   font-size: 1rem;
@@ -303,11 +295,6 @@ a {
   position: relative;
   background-color: bisque;
 }
-
-/* #side-drawer:target {
-  visibility: visible;
-  opacity: 1;
-} */
 
 #side-content-holder > .aside_btn {
   width: 1.4rem;
@@ -338,40 +325,61 @@ a {
   transform: rotate(-45deg);
 }
 
+.work-experience {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.education {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
 .skill_part {
   max-width: auto;
-  height: 50%;
+  max-height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/4;
   display: flex;
-  border: solid 1px red;
   flex-direction: column;
-  justify-content: end;
+  /* border: solid 1px red; */
 }
 
 .skill_part > .skills {
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  text-align: center;
 }
 
-.skill_part > .skills > li {
+.skill_part > .skills > div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill_part > .skills li {
   flex-grow: 1;
+  width: 100px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1rem 1rem;
 }
 
-.skill_part > .skills > li > img {
+.skill_part > .skills li > img {
   width: 30px;
   height: 30px;
   margin: 5px 0;
   object-fit: contain;
 }
 
-.skill_part > .skills > li > .skill_bar {
-  width: 100px;
+.skill_part > .skills li > .skill_bar {
+  width: 70px;
   height: 5px;
   padding: 2px;
   margin: 0.6rem 0;
@@ -379,7 +387,7 @@ a {
   border-radius: 10px;
 }
 
-.skill_part > .skills > li > .skill_bar > .skill_bar_inner {
+.skill_part > .skills li > .skill_bar > .skill_bar_inner {
   width: 70%;
   height: 100%;
   text-align: left;
@@ -387,7 +395,7 @@ a {
   background-color: black;
 }
 
-.skill_part > .skills > .program > p {
+.skill_part > .skills .program > p {
   width: 100%;
   font-size: 0.8rem;
   line-height: 2;

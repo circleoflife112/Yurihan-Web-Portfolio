@@ -1,15 +1,28 @@
-const initSlider = () => {
+const delmaSlider = () => {
   const slideButton = document.querySelectorAll("button");
   const imageList = document.getElementById("postcard-design-container");
-  const mainImg = document.querySelector("#postcard-design-container li");
+  const mainImg = document.querySelectorAll("#postcard-design-container li");
+
+  const margin = 32;
 
   slideButton.forEach((button) => {
     button.addEventListener("click", () => {
       const direction = button.id === "pre-button" ? -1 : 1;
-      const scrollAmount = imageList.clientWidth * direction;
+      const scrollAmount = (mainImg[0].clientWidth + margin) * direction;
       imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
   });
-
-  console.log(mainImg.clientWidth);
 };
+
+window.addEventListener("load", delmaSlider);
+
+const mobileViewWrap = document.getElementById("mobile-imgs-title");
+const mobileView = document.querySelectorAll(".mobile_view");
+
+function mobileViewScale() {
+  mobileView.classList.toggle("active");
+}
+
+mobileViewWrap.addEventListener("mouseover", mobileViewScale);
+
+console.log(mobileView);

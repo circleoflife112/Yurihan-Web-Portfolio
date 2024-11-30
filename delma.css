@@ -221,9 +221,9 @@ p {
 #delma-title > li:nth-of-type(3) {
   grid-column: 2/3;
   grid-row: 2/3;
-  padding-left: 5rem;
+  padding-left: 9rem;
   padding-bottom: 2rem;
-  justify-items: right;
+  justify-content: right;
   text-align: right;
 }
 
@@ -231,9 +231,8 @@ p {
   display: block;
   border: 2px solid black;
   border-radius: 50px;
-  padding-right: 1rem;
+  padding-right: 2rem;
   margin-top: 1rem;
-  margin-left: 5rem;
   transition: 0.7s, 0.7s;
 }
 
@@ -428,6 +427,7 @@ section {
   width: 600px;
   text-align: center;
   padding: 1rem 2rem;
+  transition: 1s ease-in-out;
 }
 
 #postcard-design-container > li > img {
@@ -438,6 +438,10 @@ section {
 .for_hompage {
   font-weight: 200;
   font-style: italic;
+}
+
+.active {
+  transform: scale(1.2);
 }
 
 /* button custom */
