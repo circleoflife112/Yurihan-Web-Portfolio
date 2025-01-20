@@ -20,9 +20,15 @@ const mobileViewWrap = document.getElementById("mobile-imgs-title");
 const mobileView = document.querySelectorAll(".mobile_view");
 
 function mobileViewScale() {
-  mobileView.classList.toggle("active");
+  if (mobileView.forEach.classList.contains("active")) {
+    mobileView.forEach.classList.remove("active");
+  } else {
+    mobileView.forEach.classList.add("active");
+  }
 }
 
 mobileViewWrap.addEventListener("mouseover", mobileViewScale);
 
 console.log(mobileView);
+
+console.dir(mobileViewWrap);

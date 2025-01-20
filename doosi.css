@@ -59,6 +59,20 @@ p {
   color: rgb(95, 93, 86);
 }
 
+.icon {
+  width: 30px;
+  height: 5px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
 /* text properties end */
 
 #doosi-wrap {
@@ -71,11 +85,11 @@ p {
 
 #doosi-main {
   width: 100%;
-  height: 100vh;
+  max-height: 95vh;
   display: flex;
-  gap: 7rem;
   margin: 0 auto;
   padding: 0 120px;
+  overflow: hidden;
   animation: change 1s ease forwards;
 }
 
@@ -93,7 +107,7 @@ p {
 #goto_other_page {
   display: flex;
   position: absolute;
-  right: 27rem;
+  right: 22rem;
   top: 2.5rem;
 }
 
@@ -180,19 +194,60 @@ p {
   line-height: 50%;
 }
 
+/** thread img part **/
+
+#doosi-main-img {
+  flex-basis: 15%;
+  height: auto;
+  padding-right: 5rem;
+}
+
+#doosi-main-img > .thread-opacity {
+  width: 100%;
+  height: 100%;
+}
+
+#doosi-main-img > .thread-opacity > a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#doosi-main-img > .thread-opacity > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/** title part **/
+
 #doosi-title {
+  flex-grow: 1;
   display: grid;
+  margin-left: 0;
+}
+
+#doosi-title > li > h1 {
+  line-height: 0;
 }
 
 #doosi-title > li > h3 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 100;
+  line-height: 0.5;
 }
+
+.doosi-list {
+  width: 70%;
+}
+
+/** explanation part **/
 
 #doosi-main-text {
   max-width: 550px;
-  flex-grow: 1;
+  flex-grow: 2;
   padding: 7rem 0;
+  padding-left: 7rem;
 }
 
 #doosi-main-text > li {
@@ -209,25 +264,11 @@ p {
   overflow: auto;
 }
 
-.icon {
-  width: 30px;
-  height: 5px;
-  margin-top: 1rem;
-  margin-right: 1rem;
-}
-
-.icon img {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  object-fit: contain;
-}
-
 .doosi-list > a {
   display: block;
   border: 2px solid black;
   border-radius: 50px;
-  padding-left: 1rem;
+  padding-left: 2rem;
   margin-top: 1rem;
   transition: 0.7s, 0.7s;
 }
@@ -239,29 +280,6 @@ p {
 
 .doosi-list > a > h4 {
   font-weight: 400;
-}
-
-#doosi-main-img {
-  height: 100%;
-  width: 120px;
-}
-
-#doosi-main-img > .thread-opacity {
-  height: 100%;
-  width: 100%;
-  /* opacity: 0.3; */
-  overflow: hidden;
-}
-
-#doosi-main-img > .thread-opacity > a {
-  width: 100%;
-  height: 100%;
-}
-
-#doosi-main-img > .thread-opacity > a > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 #doosi-main-text {
@@ -743,50 +761,52 @@ section {
 
 /** 1440 ~ 1224 **/
 
-@media (max-width: 1440px) and (min-width: 1224px) {
+@media (max-width: 1440px) and (min-width: 1245px) {
+  h2 {
+    font-size: 3rem;
+  }
+
   #doosi-main {
-    height: 900px;
+    height: 95vh;
   }
 
   #doosi-main-img {
     height: 100%;
-    width: 150px;
+    padding-right: 4rem;
+    overflow: hidden;
   }
 
   .thread-opacity {
     height: 100%;
     width: 100%;
-    margin: 0 10%;
-    /* opacity: 0.3; */
-    overflow: hidden;
   }
 
-  .thread-opacity > a {
-    width: 100%;
-    height: 100%;
-  }
-
+  .thread-opacity > a,
   .thread-opacity > a > img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-
-  #doosi-title {
-    margin-left: 3rem;
   }
 
   #doosi-title > .doosi-title-1 {
     height: 330px;
   }
+
+  #doosi-web {
+    padding: 100px;
+  }
 }
 
 /** 1224 ~ 1080 **/
 
-@media (max-width: 1224px) and (min-width: 1080px) {
+@media (max-width: 1245px) and (min-width: 1080px) {
   h1 {
     font-family: "Playfair Display", serif;
     font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1;
   }
 
   h3 {
@@ -797,26 +817,29 @@ section {
   }
 
   h4 {
-    font-family: "Noto Sans KR", sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
   }
 
   #doosi-main {
-    height: 750px;
+    height: 95vh;
   }
 
   #doosi-main-img {
     height: 100%;
-    width: 100px;
+    width: 70%;
+    padding: 0;
   }
 
   .thread-opacity {
     height: 100%;
     width: 100%;
-    margin: 0 10%;
-    /* opacity: 0.3; */
-    overflow: hidden;
+  }
+
+  .thread-opacity > a,
+  .thread-opacity > a > img {
+    width: 100%;
+    height: 100%;
   }
 
   #doosi-title {
@@ -832,14 +855,90 @@ section {
     margin-top: 7.5rem;
   }
 
+  #doosi-title > .doosi-list {
+    width: 100%;
+  }
+
   #doosi-main-text {
-    max-width: 600px;
+    max-width: 450px;
+    padding: 9rem 0;
+    padding-left: 5rem;
+  }
+
+  section > div {
+    padding: 50px;
   }
 }
 
 /** 1080 ~ 768 **/
 
 @media (max-width: 1080px) and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-weight: 200;
+    font-size: 1.3rem;
+    line-height: 0.7rem;
+  }
+
+  h4 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 2;
+    color: black;
+  }
+
+  #doosi-main {
+    height: 95vh;
+    padding: 0 70px;
+  }
+
+  #doosi-main-img {
+    height: 100%;
+    width: 70%;
+    padding: 0;
+  }
+
+  .thread-opacity {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .thread-opacity > a,
+  .thread-opacity > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #doosi-title {
+    margin-left: 2rem;
+  }
+
+  #doosi-title > .doosi-title-1 {
+    height: 230px;
+    align-items: center;
+  }
+
+  #doosi-title > .doosi-list {
+    width: 100%;
+  }
+
+  #doosi-main-text {
+    max-width: 300px;
+    padding: 8rem 0;
+    padding-left: 3rem;
+  }
+
   section {
     box-shadow: -4px -4px 8px 8px rgb(110, 104, 88, 20%);
     border-radius: 50px;
@@ -865,7 +964,7 @@ section {
   }
 
   #doosi-web-intro > li > a > h2 {
-    line-height: 50%;
+    line-height: 0.5;
     padding-top: 0.7rem;
     font-size: 3.5rem;
   }
