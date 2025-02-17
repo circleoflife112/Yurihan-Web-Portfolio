@@ -59,6 +59,10 @@ p {
   color: rgb(95, 93, 86);
 }
 
+b {
+  color: black;
+}
+
 .icon {
   width: 30px;
   height: 5px;
@@ -107,19 +111,22 @@ p {
 #goto_other_page {
   display: flex;
   position: absolute;
-  right: 22rem;
-  top: 2.5rem;
+  right: 16rem;
+  top: 3rem;
 }
 
 #goto_other_page > li {
   margin: 0 1rem;
-  /* transition: 1s, 1s;
-  transform-origin: 100% 50%;
-  transform: ease-out; */
 }
 
 #goto_other_page > li > a {
   position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+#goto_other_page > li:hover > a {
+  color: black;
+  font-weight: bold;
 }
 
 #goto_other_page > li > a:after {
@@ -141,57 +148,40 @@ p {
   opacity: 1;
 }
 
-#goto_other_page > li:hover {
-  font-weight: 500;
-}
-
 #title_holder {
   position: fixed;
   display: flex;
-  right: 8rem;
+  right: 7rem;
   top: 1rem;
 }
 
 #title_holder > li {
+  position: static;
+  position: relative;
   color: black;
   transition: 0.7s;
   top: 1rem;
-  height: 60px;
-  margin: 0 0.3rem;
-  line-height: normal;
-}
-
-#title_holder > .portfolio {
-  padding: 0 1.3rem;
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
+  margin: 0 0.5rem;
   background-color: black;
   color: #fffceb;
+  text-align: center;
 }
 
-#title_holder > .top-btn {
-  border-radius: 50%;
-  right: 6rem;
-  padding: 0 1rem;
-  background-color: black;
-  color: #fffceb;
-}
-
-#title_holder > .top-btn h4 {
-  line-height: 50%;
+#title_holder > li i {
+  position: absolute;
+  top: 35%;
+  bottom: 35%;
+  right: 30%;
+  left: 30%;
 }
 
 #title_holder > li:hover {
   background-color: #fffceb;
   color: black;
   box-shadow: 1px 1px 10px 3px rgb(110, 104, 88, 20%);
-}
-
-.portfolio > a {
-  display: flex;
-}
-
-.portfolio > a > h4 {
-  line-height: 50%;
 }
 
 /** thread img part **/
@@ -325,8 +315,7 @@ section {
   max-height: 780px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding: 6.25rem 2rem;
+  justify-content: flex-end;
 }
 
 .doosi_web_ex_wrap {
@@ -375,6 +364,10 @@ section {
   margin-left: 1rem;
 }
 
+#doosi-web-intro > li:nth-of-type(1) h2 {
+  line-height: 0.5;
+}
+
 #doosi-web-intro h3 {
   font-family: sans-serif;
   margin-left: 1rem;
@@ -383,10 +376,6 @@ section {
 .doosi_work_info p {
   margin-left: 1rem;
   line-height: 0.8;
-}
-
-#doosi-web-intro > li:nth-of-type(1) h2 {
-  line-height: 0.5;
 }
 
 .online_shop {
@@ -759,7 +748,7 @@ section {
 
 /**   미디어 쿼리 **/
 
-/** 1440 ~ 1224 **/
+/** 1440 ~ 1245 **/
 
 @media (max-width: 1440px) and (min-width: 1245px) {
   h2 {
@@ -796,7 +785,7 @@ section {
   }
 }
 
-/** 1224 ~ 1080 **/
+/** 1245 ~ 1080 **/
 
 @media (max-width: 1245px) and (min-width: 1080px) {
   h1 {
@@ -826,9 +815,7 @@ section {
   }
 
   #doosi-main-img {
-    height: 100%;
-    width: 70%;
-    padding: 0;
+    padding: 0 1.5rem;
   }
 
   .thread-opacity {
@@ -897,14 +884,12 @@ section {
   }
 
   #doosi-main {
-    height: 95vh;
     padding: 0 70px;
   }
 
   #doosi-main-img {
     height: 100%;
-    width: 70%;
-    padding: 0;
+    padding: 0 2rem;
   }
 
   .thread-opacity {

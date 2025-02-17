@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="faviconimg/파비콘2.png" type="image/x-icon" />
+
+    <!-- css link -->
     <link rel="stylesheet" href="personal.css" />
+    <link rel="stylesheet" href="shared.css" />
+    <!-- css link -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,200&family=Open+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Roboto:wght@100;700&display=swap" rel="stylesheet"> -->
@@ -33,25 +38,13 @@
       <div id="personal-main">
         <ul id="goto_other_page">
           <li>
-            <a href="doosi.html">Doosi</a>
+            <a href="doosi.html">두시</a>
           </li>
           <li>
-            <a href="delma.html">Delma Studios</a>
+            <a href="delma.html">델마 스튜디오</a>
           </li>
           <li>
-            <a href="concept.html">Concept of Portfolio</a>
-          </li>
-        </ul>
-        <ul id="title_holder">
-          <li class="portfolio">
-            <a href="index.html">
-              <h4>go to main page</h4>
-            </a>
-          </li>
-          <li class="top-btn">
-            <a href="#personal-main">
-              <h4>top</h4>
-            </a>
+            <a href="concept.html">포트폴리오 컨셉</a>
           </li>
         </ul>
         <ul id="personal-main-img">
@@ -70,43 +63,50 @@
           </li>
           <li class="personal-list">
             <a href="#renewal_part">
-              <h4>Renewal</h4>
+              <h4>리뉴얼 페이지</h4>
             </a>
             <a href="#copy_part">
-              <h4>Copy</h4>
+              <h4>카피 코딩</h4>
             </a>
           </li>
           <li class="personal-main-text">
-            <div class="icon">
-              <img src="icon/dot.png" alt="" />
-            </div>
             <p>
-              상업적 의도가 없는 개인 작업물입니다. html, css 의 기본을 활용한
-              웹페이지 카피 작업과, 심화된 html, css 또 javaScript, jQuery 를
-              활용한 홈페이지 리뉴얼입니다.
+              <b>상업적 의도가 없는 개인 작업물입니다.</b>
+              <br />
+              html, css 의 기본을 활용한 웹페이지 카피 작업과, 심화된 html, css
+              또 javaScript, jQuery 를 활용한 홈페이지 리뉴얼입니다.
             </p>
           </li>
         </ul>
       </div>
       <section id="personal_port">
+        <!-- 불가리안 로즈 리뉴얼 -->
         <div id="renewal_part">
           <ul id="bulgarian_rose_wrap">
             <li class="bulgarian_rose_mokup">
-              <img src="personalworkimg/bulgarianRoseMockup.png" alt="" />
+              <!-- <img src="personalworkimg/bulgarianRoseMockup.png" alt="" /> -->
+              <img src="personalworkimg/bulgarianrosemac.png" alt="" />
             </li>
-            <li class="bulgarian_rose_mokup_iphone">
+            <!-- <li class="bulgarian_rose_mokup_iphone">
               <img src="personalworkimg/mobileMockup.png" alt="" />
-            </li>
+            </li> -->
             <li class="bulgarian_rose_contents">
               <div>
                 <h2>Bulgarian Rose</h2>
                 <h2>Renewal</h2>
               </div>
               <p>
-                코스메틱 브랜드 <b>'불가리안 로즈'</b> 홈페이지 가상
-                리뉴얼입니다. 한국에 최근 입점한 만큼, 다양한 이벤트가
-                돋보이도록 디자인했습니다. 가장 메인이 되는 이벤트를 강조해
-                javaScript 로 카운트다운을 주어 판매를 유도하도록 구성했습니다.
+                <b>
+                  코스메틱 브랜드 '불가리안 로즈' 홈페이지 가상 리뉴얼입니다.
+                </b>
+                <br />
+                - 브랜드 컬러를 활용해 브랜드를 각인시킨 웹디자인
+                <br />
+                - css 미디어쿼리를 이용해 모바일뷰까지 고려한 반응형 디자인
+                <br />
+                - <b>자바스크립트</b> 로 이벤트 카운트다운을 구현해 구매를 유도
+                <br />
+                - <b>자바스크립트</b> 를 이용한 이미지 클릭 앤 슬라이드 구현
               </p>
               <div class="btn_wrap">
                 <a href="#">
@@ -122,6 +122,36 @@
             </li>
           </ul>
         </div>
+
+        <!-- 모멘땡 카피 (구글 앱)-->
+
+        <div id="copy_part">
+          <ul id="sinhan_card_wrap">
+            <li class="sinhancard_contents monenthang_contents">
+              <div>
+                <h2>Momenthang</h2>
+                <h2>Copy</h2>
+              </div>
+              <p>
+                <strong>구글 앱 '모멘텀' 페이지 카피코딩 </strong><br />
+                온라인 강좌 '노마드 코드' 를 수강하며 클론코딩한 작업물입니다.
+              </p>
+              <div class="btn_wrap">
+                <a
+                  href="https://circleoflife112.github.io/momenThang/"
+                  target="_blank"
+                >
+                  <h4>홈페이지</h4>
+                </a>
+              </div>
+            </li>
+            <li class="sinhan_card_mokup">
+              <img src="personalworkimg/momenthangimg.png" alt="" />
+            </li>
+          </ul>
+        </div>
+
+        <!-- 신한카드 카피-->
         <div id="copy_part">
           <ul id="sinhan_card_wrap">
             <li class="sinhancard_contents">
@@ -143,11 +173,28 @@
               </div>
             </li>
             <li class="sinhan_card_mokup">
-              <img src="personalworkimg/shinhanCardMockup.png" alt="" />
+              <img src="personalworkimg/sinhanmockup.png" alt="" />
             </li>
           </ul>
         </div>
       </section>
+
+      <!-- 고정 네비게이션 -->
+
+      <ul id="title_holder">
+        <li class="portfolio">
+          <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li class="top-btn">
+          <a href="#personal-main">
+            <i class="fa-solid fa-chevron-up"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- 고정 네비게이션 -->
     </div>
   </body>
 </html>
