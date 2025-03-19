@@ -61,3 +61,21 @@
 }
 
 /** 고정 네비게이션 **/
+
+/** 본문 목차 넘버 **/
+
+@media (max-width: 1979px) and (min-width: 0px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fffceb;
+  }
+
+  body::after {
+    content: "error";
+  }
+
+  body:nth-child() {
+    display: none;
+  }
+}
