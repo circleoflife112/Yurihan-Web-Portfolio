@@ -902,7 +902,7 @@ section {
   }
 
   body::after {
-    content: "! Sorry, We do not support smaller window ! ";
+    content: "! Sorry, We do not support smaller screen ! ";
     position: absolute;
     top: 0;
     bottom: 0;

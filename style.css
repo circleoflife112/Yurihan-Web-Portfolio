@@ -110,7 +110,6 @@ a {
   height: 100%;
   position: relative;
   overflow: hidden;
-  /* border: 1px red solid; */
 }
 
 #rope_holder > li > a > .thread_img {
@@ -165,6 +164,10 @@ a {
   writing-mode: vertical-rl;
   text-align: center;
   padding: 1rem 0;
+}
+
+.thread_title > p {
+  display: inline-block;
 }
 
 #rope_holder > li > a:hover .thread_img {
@@ -447,10 +450,13 @@ h1 {
     height: 200px;
   }
 
+  .english_title {
+    display: none;
+  }
+
   /* thread hover title */
 
   #rope_holder h3 {
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size: 1.1rem;
   }
 
@@ -480,6 +486,17 @@ h1 {
     width: 180px;
   }
 
+  .yellow-delma .thread_title,
+  .green-thread .thread_title {
+    top: 5%;
+    left: 38%;
+    right: 38%;
+    line-height: 0;
+    writing-mode: vertical-rl;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
   /* thread hover */
 
   #rope_holder li:hover h3 {
@@ -505,15 +522,6 @@ h1 {
   }
 
   /** title **/
-
-  #title_holder {
-    height: 100%;
-    padding: 0 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    box-shadow: -5px 5px 20px 8px rgb(110, 104, 88, 20%);
-  }
 
   .portfolio {
     display: flex;
@@ -550,7 +558,7 @@ h1 {
   }
 
   body::after {
-    content: "! Sorry, We do not support smaller window ! ";
+    content: "! Sorry, We do not support smaller screen ! ";
     position: absolute;
     top: 0;
     bottom: 0;
