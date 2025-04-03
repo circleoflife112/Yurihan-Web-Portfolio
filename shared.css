@@ -71,10 +71,6 @@
     background-color: #fffceb;
   }
 
-  body::after {
-    content: "error";
-  }
-
   body:nth-child() {
     display: none;
   }

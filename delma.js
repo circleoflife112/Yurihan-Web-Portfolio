@@ -3,7 +3,7 @@ const delmaSlider = () => {
   const imageList = document.getElementById("postcard-design-container");
   const mainImg = document.querySelectorAll("#postcard-design-container li");
 
-  const margin = 32;
+  const margin = 20;
 
   slideButton.forEach((button) => {
     button.addEventListener("click", () => {
