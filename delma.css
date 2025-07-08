@@ -371,9 +371,9 @@ section {
 /** slider **/
 
 #card-slider-wrap {
+  position: relative;
   max-width: 100;
   height: auto;
-  position: relative;
   margin: 0 auto;
   margin: 7rem 120px;
   padding-bottom: 7rem;
@@ -388,7 +388,7 @@ section {
   height: 100%;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   font-size: 0;
   overflow-x: auto;
 }
@@ -435,8 +435,8 @@ section {
   position: absolute;
   border: none;
   background: rgb(68, 67, 57);
-  top: 70%;
-  bottom: 45%;
+  top: 60%;
+  /* bottom: 40%; */
   font-size: 2rem;
   line-height: 0%;
   color: white;
