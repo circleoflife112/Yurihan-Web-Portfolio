@@ -7,8 +7,9 @@ const initSlider = () => {
   slideButton.forEach((button) => {
     button.addEventListener("click", () => {
       const direction = button.id === "pre-button" ? -1 : 1;
-      const scrollAmount = slideList[0].clientWidth * direction;
+      const scrollAmount = slideList[0].clientWidth * direction + margin / 2;
       imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      console.log(scrollAmount);
     });
   });
 };
